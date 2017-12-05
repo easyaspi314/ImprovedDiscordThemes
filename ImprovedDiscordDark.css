@@ -1,0 +1,182 @@
+/*
+ * The MIT License
+ *
+ * Copyright (c) 2017 easyaspi314
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/* TODO: Organize this mess. */
+/* The really, really, really dim text in timestamps, the "edited" thing, etc. */
+.theme-dark .friends-table .messages .divider:not(.red) span,
+.theme-dark .messages-wrapper .messages .divider:not(.red) span,
+.theme-dark .message-group h2 span, .theme-dark .message-group .comment .edited,
+.theme-dark #bd-settings-sidebar > span > span:last-child {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+/* Neutral text color. */
+.theme-dark .nameDefaultText-QoumjC,
+.theme-dark .nameDefaultVoice-1swZoh,
+.theme-dark .nameLockedText-2fGz07,
+.theme-dark .nameLockedVoice-wNOMNa,
+.theme-dark .iconCollapsed-1INdMX,
+.theme-dark .iconDefault-xzclSQ,
+.theme-dark .nameCollapsed-3_ChMu,
+.theme-dark .nameDefault-Lnjrwm,
+.theme-dark .channelIcon-1KtcMW,
+.theme-dark .faded-1KRDbu,
+.theme-dark .header-1-f9X5,
+.theme-dark .channel-members h2,
+.theme-dark #bd-settingspane-container .ui-switch-item .style-description,
+.theme-dark #bd-settings-sidebar .ui-tab-bar-header,
+.theme-dark .guilds-wrapper .guilds .friends-online,
+.theme-dark .emoji-picker .category
+{
+    color: rgba(255, 255, 255, 0.6);
+}
+/* reset some opacity */
+.theme-dark .tj.foreground-2zy1hc,
+.theme-dark .friends-table .messages .divider.divider-red>div,
+.theme-dark .messages-wrapper .messages .divider.divider-red>div,
+.theme-dark .popout-menu .popout-menu-icon{
+    opacity: 1 !important;
+}
+/* Dialog background */	
+.theme-dark .search-popout,
+.theme-dark .emoji-picker {
+    background-color: #2f3136;
+}
+/* The custom emoji tab bar in BD */
+.theme-dark #bda-qem {
+    background-color: #282b30 !important;
+}
+/*
+ * *facepalms*
+ * Brighten the dark blue role color.
+ * They actually used inline style instead of a dedicated class.
+ */
+.theme-dark .user-name[style="color: rgb(32, 102, 148);"],
+.theme-dark .member-username-inner[style="color: rgb(32, 102, 148);"] {
+   color: hsl(204, 74%, 40%) !important;
+}
+/* Hover backgrounds. */
+.theme-dark .search-popout .option:hover,
+.theme-dark .search-popout .option.selected,
+.theme-dark .emoji-picker .emoji-item.selected,
+.theme-dark .emoji-picker .sticky-header,
+.theme-dark .emoji-picker .search-bar,
+.theme-dark .popout-menu-item:hover,
+.theme-dark #bda-qem button:not(.active):hover {
+    background-color: rgb(54, 57, 63) !important;
+}
+/* Brighten some icons */
+.theme-dark .spriteNormal-3BYqCK:not(.spriteHovered-2ymMOw){
+    opacity: .8 !important;
+}
+.theme-dark .emoji-picker .categories .item:not(:hover):not(.selected) {
+    filter: brightness(.4); /* :( */
+}
+/* Scrollbar for the popups. TODO: Polyfill. */
+.theme-dark .popouts *::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-color: transparent !important;
+    background-clip: padding-box !important;
+}
+.theme-dark .popouts *::-webkit-scrollbar-track-piece {
+    background-color: #282b30 !important;
+    border-color: transparent !important;
+    background-clip: padding-box !important;
+}
+.theme-dark .popouts *::-webkit-scrollbar-track {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+/* color for the quick emoji in BD */
+.theme-dark #bda-qem button {
+    color: rgba(255, 255, 255, 0.8);
+    border:none !important;
+    box-shadow: hsla(240,6%,97%,.1) 1px 0 0 0 !important;
+}
+.theme-dark #bda-qem button.active {
+    background-color: rgba(79,84,92,.6) !important;
+}
+/* Use the search bar icon from the actual search bar in the emoji search dialog. */
+.theme-dark .emoji-picker .search-bar-icon i {
+    background-image:url(/assets/4d254296157bb8927b7d53ed59beb0d8.svg) !important;
+}
+/* Remove the weird fade shadow. Eventually, I should replace it. */
+.theme-dark .search-popout .option:after,
+.theme-dark .emoji-picker .search-bar-icon:hover:before {
+    background: transparent !important;
+}
+/* Search popup text */
+.theme-dark .search-popout .option .filter {
+    color: #aaaaaa;
+}
+.theme-dark .search-popout .option .answer,
+.theme-dark .popout-menu-item:hover .popout-menu-item-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+/* Brighter dividers */
+.theme-dark .message-group:not(.has-divider), .popout-menu .popout-menu-separator {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+.theme-dark .friends-table .messages .divider:not(.red) div,
+.theme-dark .messages-wrapper .messages .divider:not(.red) div,
+.theme-dark .guilds-wrapper .guild-separator:after,
+.theme-dark .topic-1KFf6J:before {
+    background: rgba(255, 255, 255, 0.1);
+}
+/* The channel list stuff */
+.theme-dark .nameMutedText-1YDcP-,
+.theme-dark .nameMutedVoice-26k4cP {
+    color: rgba(255, 255, 255, 0.3);
+}
+.theme-dark .nameHoveredText-2FFqiz,
+.theme-dark .popout-menu-item .popout-menu-item-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+/* Chat box. Use white text. */
+.theme-dark .textArea-20yzAH {
+    color: #fff;
+}
+/* Brighter links */
+.theme-dark .message-group a,
+.theme-dark .mention {
+    color: #0096ff;
+}
+/* Placeholders are way too dim */
+.theme-dark ::-webkit-input-placeholder,
+.theme-dark ::-moz-placeholder,
+.theme-dark ::-ms-input-placeholder,
+.theme-dark ::placeholder,
+.theme-dark .public-DraftEditorPlaceholder-root,
+.theme-dark .description-3MVziF, .theme-dark .labelDescriptor-1BebCl,
+.theme-dark .desc-2dKaro:not(.descChecked-KbaI-r) {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+/* More divider stuff. */
+.theme-dark .chat form {
+    box-shadow: 0 -1px 0 hsla(0,0%,100%,.2)
+}
+/* Fix scrolling lag */
+.scroller, .scroller-fzNley {
+    will-change: transform;
+}
